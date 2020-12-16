@@ -1,3 +1,4 @@
-FROM busybox
-RUN echo "Building a simple docker image"
-CMD echo "Hello World!! This is a docker container"
+FROM debian:sid
+RUN apt-get -y update
+RUN apt-get -y install nano
+CMD ["/bin/nano","/tmp/notes"]
